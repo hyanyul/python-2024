@@ -1,4 +1,4 @@
-#file: p30_standardLid.py
+#file: p30_standardLib.py
 #desc: 표준 라이브러리(빌트인) 학습
 
 import datetime
@@ -46,3 +46,14 @@ for i in range(5):
     total.append(result)
 
 print(total)
+
+#내부 라이브러리 중 웹사이트 분석용
+#요청(request) -> 응답(response)
+
+from urllib.request import Request, urlopen
+
+req = Request('https://www.naver.com')
+res = urlopen(req)
+
+print(res.status)   #응답코드 200
+print(res.read())   #내용 가져오기(HTML 가져옴)

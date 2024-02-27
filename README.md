@@ -72,3 +72,28 @@
         - OS 내 디렉토리 검색
         - 아스키 및 유니코드
         - ![주소록 앱](https://github.com/hyanyul/python-2024/blob/main/images/bigdata.gif?raw=true) 만들기
+        ```python
+        class Contact:  #주소록 클래스
+            def __init__(self, name, phoneNumber, eMail, addr) -> None:     #생성자
+                self.__name = name
+                self.__phoneNumber = phoneNumber
+                self.__eMail = eMail
+                self.__addr = addr
+
+            def __str__(self) -> str:   #사용자가 원하는 형태로 출력
+                strRes = (f'이  름: {self.__name}\n'       #원래 출력: 주소값 나옴
+                    f'핸드폰: {self.__phoneNumber}\n'
+                    f'이메일: {self.__eMail}\n'
+                    f'주  소: {self.__addr}\n')
+                return strRes  #주소값 리턴
+            
+            def isNameExist(self, name):    #__name에 접근할 수 있는 함수 만듦, 연락처 여부 확인
+                if self.__name == name:
+                    return True
+                else:
+                    return False
+            
+            def getInfo(self):  #튜플 형태로 데이터 전달
+                return self.__name, self.__phoneNumber, self.__eMail, self.__addr
+        ```
+        

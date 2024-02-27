@@ -15,8 +15,26 @@ class Contact:  #주소록 클래스
          strRes = (f'이  름: {self.__name}\n'       #원래 출력: 주소값 나옴
                    f'핸드폰: {self.__phoneNumber}\n'
                    f'이메일: {self.__eMail}\n'
-                   f'주  소: {self.__addr}')
+                   f'주  소: {self.__addr}\n')
          return strRes  #주소값 리턴
+    
+    def isNameExist(self, name):    #__name에 접근할 수 있는 함수 만듦
+         if self.__name == name:
+              return True
+         else:
+              return False
+         
+    def getName(self):
+         return self.__name
+    
+    def getPhoneNumber(self):
+         return self.__phoneNumber
+    
+    def getEmail(self):
+         return self.__eMail
+    
+    def getAddr(self):
+         return self.__addr
     
 
 def setContact():   #키보드로 입력 받아서 변수 초기화해주는 역할
@@ -49,6 +67,32 @@ def getContact(lstContact):
      for item in lstContact:
           print(item)
 
+def delContact(lstContact, name):
+     for i, item in enumerate(lstContact):
+        if item.isNameExist(name):
+             del lstContact[i]
+
+def saveContact(lstContact):
+     f = open('./day05/db_contact.txt', mode='wt', encoding='utf-8')
+     for item in lstContact:
+          f.write(item.getName() + '/')
+          f.write(item.getPhoneNumber() + '/')
+          f.write(item.getEmail() + '/')
+          f.write(item.getAddr() + '\n')
+     f.close()
+
+def loadContact(lstContact):
+     f = open('./day05/db_contact.txt')
+     while True:
+          line = f.readline()
+          if not line:
+               break
+          
+          lines = line.split('/')
+          contact = Contact(lines[0], lines[1], lines[2], lines[3])
+          lstContact.append(contact)
+     f.close()
+
 def run():
      lstContact = []
 
@@ -61,13 +105,23 @@ def run():
                contact = setContact()
                lstContact.append(contact) 
                input()
-               clearConsole()              
+               clearConsole()  
+
           elif selMenu == 2:
                clearConsole()
                getContact(lstContact)
                input()
                clearConsole()
+
+          elif selMenu == 3:
+               clearConsole()
+               name = input('삭제할 이름을 입력하세요: ')
+               delContact(lstContact, name)
+               input()
+               clearConsole()
+
           elif selMenu == 4:  #메뉴 4 눌렀을 때 종료 가능하도록 break
+               saveContact(lstContact)
                break
      
 if __name__ == '__main__':  #메인 엔트리

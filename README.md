@@ -96,6 +96,7 @@
             def getInfo(self):  #튜플 형태로 데이터 전달
                 return self.__name, self.__phoneNumber, self.__eMail, self.__addr
         ```
-            ![주소록 앱](https://github.com/hyanyul/python-2024/blob/main/images/bigdata.gif?raw=true)
+            ![주소록 앱](https://github.com/hyanyul/python-2024/blob/main/images/bigdata01.gif?raw=true)
         
         - Window App 만들기(PyQt)
+            ![Window App](https://github.com/hyanyul/python-2024/blob/main/images/bigdata02.png?raw=true)

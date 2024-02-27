@@ -71,7 +71,7 @@
     - 파이썬 응용
         - OS 내 디렉토리 검색
         - 아스키 및 유니코드
-        - ![주소록 앱](https://github.com/hyanyul/python-2024/blob/main/images/bigdata.gif?raw=true) 만들기
+        - 주소록 앱 만들기
         ```python
         class Contact:  #주소록 클래스
             def __init__(self, name, phoneNumber, eMail, addr) -> None:     #생성자
@@ -96,4 +96,4 @@
             def getInfo(self):  #튜플 형태로 데이터 전달
                 return self.__name, self.__phoneNumber, self.__eMail, self.__addr
         ```
-        
+        ![주소록 앱](https://github.com/hyanyul/python-2024/blob/main/images/bigdata.gif?raw=true)

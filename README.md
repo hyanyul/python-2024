@@ -71,4 +71,4 @@
     - 파이썬 응용
         - OS 내 디렉토리 검색
         - 아스키 및 유니코드
-        - 주소록 앱 만들기
+        - ![주소록 앱](https://github.com/hyanyul/python-2024/blob/main/images/bigdata.gif?raw=true) 만들기

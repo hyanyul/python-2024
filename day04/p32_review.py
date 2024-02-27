@@ -45,7 +45,7 @@ for i in q:
 print(q)
 
 #Q5. 16진수를 10진수로 변경하기
-
+print(int('0xea', 16))
 
 #Q6. 리스트 항목마다 3 곱하여 리턴하기
 def three_time(x):
@@ -68,8 +68,39 @@ for i in q:
         min = i
 print(min + max)
 
+#Q8. 소수점 반올림하기
+print(f'{17/3:0.4f}')
+
 #Q11. 날짜 표시하기
 import datetime
 
 curr = datetime.datetime.now()
 print(f'{curr.year}/{curr.month:02d}/{curr.day:02d} {curr.hour:02d}:{curr.minute:02d}:{curr.second:02d}')
+
+#Q12. 로또 번호 생성하기
+import random
+
+lotto = set({})
+while True:
+    lotto.add(random.randint(1, 45))
+    if len(lotto) == 6:
+        break
+
+print(sorted(list(lotto)))
+
+#Q13. 누나는 영철이보다 며칠 더 먼저 태어났을까?
+day1 = datetime.date(1995, 11, 20)
+day2 = datetime.date(1998, 10, 6)
+print((day2 - day1).days)
+
+#Q18. 벽에 타일 붙이기
+l = 200
+h = 80
+
+res = 1
+
+for i in range(1, 81):
+    if l % i == 0 and h % i == 0:
+        res = i
+
+print(res)

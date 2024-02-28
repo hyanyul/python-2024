@@ -100,3 +100,14 @@
         
         - Window App 만들기(PyQt)
         ![Window App](https://github.com/hyanyul/python-2024/blob/main/images/bigdata02.png?raw=true)
+
+
+## 6일차 (2024.02.28)
+- 파이썬 학습
+    - 파이썬 응용
+        - PyQt5 학습
+            - QWidget 자식 클래스 종류 학습
+            ![QLabel](https://github.com/hyanyul/python-2024/blob/main/images/bigdata03.png?raw=true)
+            
+            - Naver 뉴스 API 검색 앱
+            ![네이버 뉴스 검색 앱](https://github.com/hyanyul/python-2024/blob/main/images/bigdata04.png?raw=true)

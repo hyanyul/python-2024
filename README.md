@@ -110,4 +110,4 @@
             ![QLabel](https://github.com/hyanyul/python-2024/blob/main/images/bigdata03.png?raw=true)
             
             - Naver 뉴스 API 검색 앱
-            ![네이버 뉴스 검색 앱](https://github.com/hyanyul/python-2024/blob/main/images/bigdata04.png?raw=true)
+            ![네이버 뉴스 검색 앱](https://github.com/hyanyul/python-2024/blob/main/images/bigdata4.png?raw=true)

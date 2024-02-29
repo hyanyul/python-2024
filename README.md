@@ -110,7 +110,7 @@
             ![QLabel](https://github.com/hyanyul/python-2024/blob/main/images/bigdata03.png?raw=true)
             
             - Naver 뉴스 API 검색 앱
-            ![네이버 뉴스 검색 앱](https://github.com/hyanyul/python-2024/blob/main/images/bigdata4.png?raw=true)
+            ![네이버 뉴스 검색 앱](https://github.com/hyanyul/python-2024/blob/main/images/bigdata04.png?raw=true)
 
 
 ## 7일차
@@ -120,3 +120,14 @@
     - json 학습 
     - PyQt5
         - 스레드 개념, 학습
+        ![스레드](https://github.com/hyanyul/python-2024/blob/main/images/bigdata05.png?raw=true)
+        - TTS
+        - QRCode 생성기
+        ![QR](https://github.com/hyanyul/python-2024/blob/main/images/bigdata06.png?raw=true)
+        - 구글번역기앱
+        ![구글번역](https://github.com/hyanyul/python-2024/blob/main/images/bigdata07.png?raw=true)
+
+
+## 8일차
+- 파이썬 응용
+    - 파이썬 자동화

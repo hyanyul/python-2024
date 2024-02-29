@@ -63,18 +63,25 @@ class qtApp(QWidget):
 
         n = 0
         for post in result:
-            self.tblSearchResult.setItem(n, 0, QTableWidgetItem(post['title']))
+            #html 태그, 특수문자 삭제해야 함(<b>손흥민</b>, &lt;[<], %gt;[>], &quot;['], &nbsp;[ ])
+            title = str(post['title']).replace('<b>', '').replace('</b>', '').replace('&quot;','"')
+
+
+            self.tblSearchResult.setItem(n, 0, QTableWidgetItem(title))
             self.tblSearchResult.setItem(n, 1, QTableWidgetItem(post['link']))
             tempDates = str(post['pubDate']).split(' ')
+            
+            #현재 날짜 Thu, 29 Feb 2024 09:00:00 +09:00를 2024-02-29로 변경하는 작업
             year = tempDates[3]
-            month = time.strptime(tempDates[2], '%b').tm_mon
-            month = f'{month:02d}'
+            month = time.strptime(tempDates[2], '%b').tm_mon    #Feb, Mar와 같은 영어 단축 이름을 2, 3월에 대한 숫자로 변경하는 로직
+            month = f'{month:02d}'  #월을 두 자리로 만듦, 한 자리일 경우 앞에 0붙여서 두 자리로 만듦
             day = tempDates[1]
             date = f'{year}-{month}-{day}'
+
             self.tblSearchResult.setItem(n, 2, QTableWidgetItem(date))
             n += 1
 
-        self.tblSearchResult.setColumnWidth(0, 465)
+        self.tblSearchResult.setColumnWidth(0, 430)
         self.tblSearchResult.setColumnWidth(1, 200)
         self.tblSearchResult.setEditTriggers(QAbstractItemView.NoEditTriggers)  #컬럼 더블클릭 금지(수정 금지)
 

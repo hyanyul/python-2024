@@ -111,3 +111,12 @@
             
             - Naver 뉴스 API 검색 앱
             ![네이버 뉴스 검색 앱](https://github.com/hyanyul/python-2024/blob/main/images/bigdata4.png?raw=true)
+
+
+## 7일차
+- 파이썬 학습
+    - PyQt5 학습
+        - Naver 뉴스 API 검색 앱 마무리
+    - json 학습 
+    - PyQt5
+        - 스레드 개념, 학습

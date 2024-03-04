@@ -135,4 +135,4 @@
         - 슬랙 webhook로 모바일 메시지 전송
         <!--![슬랙](https://github.com/hyanyul/python-2024/blob/main/images/bigdata08.png?raw=true)-->
         <!--html 태그로 이미지 삽입 시 문제 없음-->
-        <img src="https://github.com/hyanyul/python-2024/blob/main/images/bigdata08.png?raw=true", width="250">
+        <img src="https://github.com/hyanyul/python-2024/blob/main/images/bigdata08.jpg?raw=true" width="250">

@@ -133,4 +133,6 @@
     - 파이썬 자동화
         - PyAutoGui 모듈(마우스, 키보드, 화면 캡쳐)
         - 슬랙 webhook로 모바일 메시지 전송
-        ![슬랙](https://github.com/hyanyul/python-2024/blob/main/images/bigdata08.png?raw=true)
+        <!--![슬랙](https://github.com/hyanyul/python-2024/blob/main/images/bigdata08.png?raw=true)-->
+        <!--html 태그로 이미지 삽입 시 문제 없음-->
+        <img src="https://github.com/hyanyul/python-2024/blob/main/images/bigdata08.png?raw=true", width="250">

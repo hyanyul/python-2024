@@ -138,7 +138,7 @@
         <img src="https://github.com/hyanyul/python-2024/blob/main/images/bigdata08.jpg?raw=true" width="250">
         
         - Tesseract 프로그램으로 이미지에서 글자 추출(인식률 높이기 위해서는 직접 트레이닝해서 트레이닝 데이터 만들어야 함)
-        ![테서렉트](https://github.com/hyanyul/python-2024/blob/main/images/bigdata09.jpg?raw=true)
+        ![테서렉트](https://github.com/hyanyul/python-2024/blob/main/images/bigdata09.png?raw=true)
 
 
 ## 9일차

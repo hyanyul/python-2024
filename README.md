@@ -152,5 +152,10 @@
 
     - 그림 에디터 만들기(with PyQt5)
     ![그림에디터](https://github.com/hyanyul/python-2024/blob/main/images/bigdata11.png?raw=true)
+
+
+## 10일차
+- 파이썬 응용
+    - 그림 에디터 완성
     - 메모장 만들기
     - Jupyter Notebook 사용법(빅데이터 분석, 코딩테스트)

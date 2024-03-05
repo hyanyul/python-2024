@@ -121,11 +121,13 @@
     - PyQt5
         - 스레드 개념, 학습
         ![스레드](https://github.com/hyanyul/python-2024/blob/main/images/bigdata05.png?raw=true)
-        - TTS
-        - QRCode 생성기
-        ![QR](https://github.com/hyanyul/python-2024/blob/main/images/bigdata06.png?raw=true)
-        - 구글번역기앱
-        ![구글번역](https://github.com/hyanyul/python-2024/blob/main/images/bigdata07.png?raw=true)
+
+- 파이썬 응용
+    - TTS
+    - QRCode 생성기
+    ![QR](https://github.com/hyanyul/python-2024/blob/main/images/bigdata06.png?raw=true)
+    - 구글번역기앱
+    ![구글번역](https://github.com/hyanyul/python-2024/blob/main/images/bigdata07.png?raw=true)
 
 
 ## 8일차
@@ -144,7 +146,11 @@
 ## 9일차
 - 파이썬 응용
     - 이미지 처리 OpenCV
-    - 플라스크 웹서버
-    - 그림 에디터 만들기
+    ![얼굴인식](https://github.com/hyanyul/python-2024/blob/main/images/bigdata10.gif?raw=true)
+
+    - [Flask](https://flask-docs-kr.readthedocs.io/ko/latest/index.html), [Django](https://developer.mozilla.org/ko/docs/Learn/Server-side/Django) 웹서버
+
+    - 그림 에디터 만들기(with PyQt5)
+    ![그림에디터](https://github.com/hyanyul/python-2024/blob/main/images/bigdata11.jpg?raw=true)
     - 메모장 만들기
     - Jupyter Notebook 사용법(빅데이터 분석, 코딩테스트)

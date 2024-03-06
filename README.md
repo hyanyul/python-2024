@@ -170,11 +170,6 @@
         ![그림에디터](https://github.com/hyanyul/python-2024/assets/158116933/cd5e3a38-69d4-4bcb-899a-82a601b1ebd3)
 
     - Jupyter Notebook 사용법(빅데이터 분석, 코딩테스트)
-<<<<<<< Updated upstream
-    - 메모장 만들기
-=======
         - Ctrl + Shift + P (명령 팔레트)
         - 노트북 사용
-    
-    - 메모장 만들기
->>>>>>> Stashed changes
+        - ChatGPT API 사용

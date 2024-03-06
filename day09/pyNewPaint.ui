@@ -84,6 +84,7 @@
       <string>Change</string>
      </property>
      <addaction name="actionGrayscale"/>
+     <addaction name="actionBlur"/>
     </widget>
     <addaction name="menu_Pen"/>
     <addaction name="menuChange"/>
@@ -194,6 +195,11 @@
   <action name="actionGrayscale">
    <property name="text">
     <string>Grayscale</string>
+   </property>
+  </action>
+  <action name="actionBlur">
+   <property name="text">
+    <string>Blur</string>
    </property>
   </action>
  </widget>

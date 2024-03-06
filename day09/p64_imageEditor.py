@@ -3,6 +3,7 @@
 '''
 qrc 파일을 사용하려면
 > pyrcc5 "resources.qrc" -o "resources_rc.py"
+> pip install imutils
 '''
 
 import sys
@@ -12,7 +13,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtGui import QCloseEvent, QMouseEvent
 from PyQt5.QtWidgets import *
 import resources_rc #리소스 파일 추가
-import cv2  #OpenCV 추가
+import cv2, imutils  #OpenCV, imutils 추가
 
 class WinApp(QMainWindow):
     def __init__(self) -> None:
@@ -21,14 +22,17 @@ class WinApp(QMainWindow):
         self.initSignal()
 
     def initUI(self):
-        uic.loadUi('./day09/pyNewPaint.ui', self)
-        self.setWindowIcon(QIcon('./day09/imgs/editor.png'))
-        self.setWindowTitle('이미지 에디터')
-        #이미지 추가 / 여러가지 UI에 대한 초기화
-        pixmap = QPixmap('./day09/cat.jpg').scaledToHeight(471)
+        # uic.loadUi('./day09/pyNewPaint.ui', self)   # VSCode 실행용
+        uic.loadUi('C:/Source/python-2024/day09/pyNewPaint.ui', self)   # PyInstaller용 절대경로
+        # self.setWindowIcon(QIcon('./day09/imgs/editor.png'))
+        self.setWindowIcon(QIcon('C:/Source/python-2024/day09/imgs/editor.png'))  #절대경로
+        self.setWindowTitle('이미지에디터  v0.5')
+        ## 이미지 추가 / 여러가지 UI에 대한 초기화
+        # pixmap = QPixmap('./day09/cat.jpg').scaledToHeight(471)
+        pixmap = QPixmap('cat.jpg').scaledToHeight(471)
         self.lblCanvas.setPixmap(pixmap)
-        self.brushColor = Qt.red    #빨간색 기본
-
+        self.brushColor = Qt.red    # 빨간색이 기본
+        ## UI 초기화 끝
         self.show()
     
     #메뉴/툴바 액션에 대한 시그널 처리 함수 정의
@@ -43,6 +47,7 @@ class WinApp(QMainWindow):
         self.action_About.triggered.connect(self.actionAboutClicked)
         #변환 메뉴 추가
         self.actionGrayscale.triggered.connect(self.actionGrayscaleClicked)
+        self.actionBlur.triggered.connect(self.actionBlurClicked)
 
     def actionNewClicked(self):
         canvas = QPixmap(self.lblCanvas.width(), self.lblCanvas.height())
@@ -64,6 +69,7 @@ class WinApp(QMainWindow):
         pixmap.save(filePath)
 
     def actionExitClicked(self):
+        cv2.destroyAllWindows()
         exit(0)
 
     def actionRedClicked(self):
@@ -78,8 +84,28 @@ class WinApp(QMainWindow):
     def actionAboutClicked(self):
         QMessageBox.about(self, '정보', '이미지 에디터')
 
+    def actionBlurClicked(self):
+        tmpPath = './temp.png'
+        pixmap = self.lblCanvas.pixmap()
+        pixmap.save(tmpPath)
+        image = cv2.imread(tmpPath)
+        blur = cv2.blur(image, (10, 10))
+        blurImg = QImage(blur, blur.shape[1], blur.shape[0], blur.strides[0], QImage.Format_BGR888)
+        self.lblCanvas.setPixmap(QPixmap.fromImage(blurImg))
+
     def actionGrayscaleClicked(self):
-        image = cv2.imread()
+        #<순서>
+        #temp.png와 같은 형태로 이미지를 임시 저장
+        #저장한 이미지 openCV로 불러옴
+        #그레이 스케일로 변경
+        #lblCanvas에 pixmap으로 변환
+        #lblCanvas에 올림
+        tmpPath = './day09/temp.png'
+        pixmap = self.lblCanvas.pixmap()    #라벨이 있는 그림을 pixmap 변수에 저장
+        pixmap.save(tmpPath)
+        image = cv2.imread(tmpPath) #tmpPath로 이미지 읽어옴
+        grayImg = QImage(image, image.shape[1], image.shape[0], image.strides[0], QImage.Format_Grayscale16)
+        self.lblCanvas.setPixmap(QPixmap.fromImage(grayImg))
 
     def mouseMoveEvent(self, e) -> None:
         print(e.x(), e.y()-54)
@@ -92,6 +118,7 @@ class WinApp(QMainWindow):
     def closeEvent(self, QCloseEvent) -> None:
         re = QMessageBox.question(self, '종료', '종료하시겠습니까?', QMessageBox.Yes|QMessageBox.No)
         if re == QMessageBox.Yes:
+            cv2.destroyAllWindows()
             QCloseEvent.accept()
         else:
             QCloseEvent.ignore()

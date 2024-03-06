@@ -167,7 +167,7 @@
         - -w: 윈도우창만 실행되고 콘솔창 삭제
         - -F: _internal 폴더 생성 안되도록 진짜 oneFile로 만들어주는 옵션
         - 실패, 재생성 시 폴더에 있는 build, dist 폴더, 같은 파일이름.spec 삭제 뒤 다시 명령어 실행
-        ![그림에디터](https://github.com/hyanyul/python-2024/blob/main/images/bigdata12.mp4?raw=true)
-        
+        https://github.com/hyanyul/python-2024/assets/158116933/cd5e3a38-69d4-4bcb-899a-82a601b1ebd3
+
     - Jupyter Notebook 사용법(빅데이터 분석, 코딩테스트)
     - 메모장 만들기

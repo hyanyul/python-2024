@@ -173,3 +173,4 @@
         - Ctrl + Shift + P (명령 팔레트)
         - 노트북 사용
         - ChatGPT API 사용
+    - 메모장 만들기

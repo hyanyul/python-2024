@@ -169,8 +169,12 @@
         - 실패, 재생성 시 폴더에 있는 build, dist 폴더, 같은 파일이름.spec 삭제 뒤 다시 명령어 실행
         ![그림에디터](https://github.com/hyanyul/python-2024/assets/158116933/cd5e3a38-69d4-4bcb-899a-82a601b1ebd3)
 
-    - Jupyter Notebook 사용법(빅데이터 분석, 코딩테스트)
+    - Jupyter Notebook 사용법(빅데이터 분석)
         - Ctrl + Shift + P (명령 팔레트)
         - 노트북 사용
         - ChatGPT API 사용
     - 메모장 만들기
+
+
+## 11일차
+- 코딩테스트
